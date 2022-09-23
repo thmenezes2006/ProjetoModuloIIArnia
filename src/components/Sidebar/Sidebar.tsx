@@ -34,7 +34,7 @@ export function Sidebar() {
             <ButtonStyled type="button">Predições</ButtonStyled>
           </ButtonMenu>
           <ButtonMenu>
-            <IconProduct />
+            <IconProduct h="25" w="25" c="#ffffff" />
 
             <ButtonStyled type="button">Produtos</ButtonStyled>
           </ButtonMenu>
