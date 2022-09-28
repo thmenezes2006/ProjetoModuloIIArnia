@@ -1,5 +1,6 @@
-import { IconPeoples } from '../../assets/icons/components/IconPeoples'
-import { IconProduct } from '../../assets/icons/components/IconsSideMenu/product'
+import { IconPeoples } from '../../assets/icons/IconPeoples'
+import { IconProduct } from '../../assets/icons/components/IconsSideMenu/IconProduct'
+import { CardDash } from '../../components/CardDash/CardDash'
 import { TableContent } from '../../components/TableContent/TableContent'
 import { Toggle } from '../../components/Toggle/Toggle'
 import {
@@ -9,6 +10,7 @@ import {
   BodyStyled,
   TopDash,
   TableDiv,
+  DivCardDash,
 } from './Dashboard.styled'
 
 export function Dashboard() {
@@ -21,6 +23,32 @@ export function Dashboard() {
             <option>Mostrar: Esse Mês</option>
           </Select>
         </DivDash>
+        <DivCardDash>
+          <CardDash
+            text="Total de Produtos em alta"
+            radial={45}
+            total={120}
+            variacaoTotal="+13%"
+          />
+          <CardDash
+            text="Total de Produtos em baixa"
+            radial={68}
+            total={56}
+            variacaoTotal="-29%"
+          />
+          <CardDash
+            text="Total de Clientes em alta"
+            radial={5}
+            total={501}
+            variacaoTotal="+25%"
+          />
+          <CardDash
+            text="Total de Clientes em baixa"
+            radial={27}
+            total={103}
+            variacaoTotal="-15%"
+          />
+        </DivCardDash>
       </TopDash>
 
       <BodyStyled>

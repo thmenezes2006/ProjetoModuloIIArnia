@@ -1,7 +1,7 @@
-import { IconClock } from '../../assets/icons/components/IconsSideMenu/clock'
-import { IconGraphic } from '../../assets/icons/components/IconsSideMenu/graphic'
-import { Logo } from '../../assets/icons/components/IconsSideMenu/logo'
-import { IconProduct } from '../../assets/icons/components/IconsSideMenu/product'
+import { IconClock } from '../../assets/icons/components/IconsSideMenu/IconClock'
+import { IconGraphic } from '../../assets/icons/components/IconsSideMenu/IconGraphic'
+import { Logo } from '../../assets/icons/components/IconsSideMenu/IconLogo'
+import { IconProduct } from '../../assets/icons/components/IconsSideMenu/IconProduct'
 import {
   LogoDivStyled,
   DivMenuStyled,
@@ -14,7 +14,7 @@ import {
   SideLeftStyled,
 } from './Sidebar.style'
 import hands from '../../assets/images/SideMenu/Saly-31.png'
-import { TextHelp } from '../../assets/icons/components/IconsSideMenu/text'
+import { TextHelp } from '../../assets/icons/components/IconsSideMenu/IconText'
 
 export function Sidebar() {
   return (

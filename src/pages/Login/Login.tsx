@@ -1,11 +1,13 @@
 import { Button } from '../../components/Form/Button/Button'
 import { Input } from '../../components/Form/Inputs/Input'
 import { ImgLogin } from '../../components/ImgLogin/ImgLogin'
+import { ShowPassword } from '../../components/ShowPassword/ShowPassword'
 import { Title } from '../../components/Title/Title'
 import {
   Checkbox,
   CheckDiv,
   Container,
+  PasswordLoginDiv,
   SideA,
   SideB,
   Wrapper,
@@ -17,8 +19,16 @@ export function Login() {
       <Wrapper>
         <SideA>
           <Title subtitle="Realize seu Login" title="Seja Bem Vindo!" />
-          <Input label="E-mail" type="text" placeholder="E-mail" />
-          <Input label="Senha" type="password" placeholder="Insira sua senha" />
+          <div>
+            <Input
+              label="E-mail"
+              type="email"
+              placeholder="exemplo@exemplo.com"
+            />
+          </div>
+          <PasswordLoginDiv>
+            <ShowPassword />
+          </PasswordLoginDiv>
           <CheckDiv>
             <Checkbox>
               <input type="checkbox" />

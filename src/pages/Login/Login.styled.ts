@@ -16,6 +16,22 @@ export const SideA = styled.div`
   align-items: justify;
   flex-direction: column;
 `
+export const PasswordLoginDiv = styled.div`
+  /* background: none; */
+  position: relative;
+`
+
+export const PasswordLoginButton = styled.div`
+  position: absolute;
+  right: 10px;
+  top: 47px;
+`
+export const ShowPasswordButton = styled.button`
+  border: none;
+  padding-top: 5px;
+  background: none;
+  cursor: pointer;
+`
 
 export const SideB = styled.div`
   background-color: #001c98;

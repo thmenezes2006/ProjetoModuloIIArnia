@@ -35,3 +35,8 @@ export const TableDiv = styled.div`
   box-shadow: 0px 7px 30px rgba(187, 192, 205, 0.4);
   border-radius: 24px;
 `
+
+export const DivCardDash = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`

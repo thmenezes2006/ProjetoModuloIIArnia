@@ -7,6 +7,10 @@ export const InputStyled = styled.input`
   height: 48px;
   margin-top: 40px;
   padding-left: 10px;
+  padding-right: 40px;
+  .div {
+    display: flex;
+  }
 `
 export const LabelStyled = styled.label`
   position: absolute;
