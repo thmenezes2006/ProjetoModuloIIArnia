@@ -1,11 +1,11 @@
 import React from 'react'
 
-export function IconCompact() {
+export function LogoCompact() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="84"
-      height="38"
+      width="60"
+      height="60"
       fill="none"
       viewBox="0 0 84 38"
     >

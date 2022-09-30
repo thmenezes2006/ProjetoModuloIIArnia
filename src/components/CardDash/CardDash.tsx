@@ -1,25 +1,34 @@
 // import { ReactNode } from 'react'
 import { RadialBar } from '../RadialChart/RadialBar'
-import { MiniCardDash, RadialStyled } from './CardDash.styled'
+import { CardBodyStyled, MiniCardDash, RadialStyled } from './CardDash.styled'
 
 type CardDashProp = {
   text: string
   radial: number
   total: number
   variacaoTotal: string
+  bColor: string
 }
-export function CardDash({ text, radial, total, variacaoTotal }: CardDashProp) {
+export function CardDash({
+  text,
+  radial,
+  total,
+  variacaoTotal,
+  bColor,
+}: CardDashProp) {
   return (
     <div>
-      <MiniCardDash>
+      <MiniCardDash bColor=" #02156A">
         <RadialStyled>
           <div>
             <RadialBar radialPercentage={radial} />
           </div>
           <div>
             <p>{text}</p>
-            <div>{total}</div>
-            <div>{variacaoTotal}</div>
+            <CardBodyStyled bColor={bColor}>
+              <h3>{total}</h3>
+              <h5>{variacaoTotal}</h5>
+            </CardBodyStyled>
           </div>
         </RadialStyled>
       </MiniCardDash>

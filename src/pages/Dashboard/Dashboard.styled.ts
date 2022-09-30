@@ -4,8 +4,8 @@ export const ContentDash = styled.div`
   justify-content: center;
   margin: 20px;
 `
-export const TopDash = styled.div`
-  background-color: #001c98;
+export const TopDash = styled.div<{ bColor: string }>`
+  background: ${({ bColor }) => `${bColor}`};
   width: 100%;
   height: 220px;
   border-radius: 15px;
@@ -19,6 +19,27 @@ export const DivDash = styled.div`
   color: white;
   display: flex;
   justify-content: space-between;
+  button {
+    align-items: center;
+    display: flex;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    p {
+      padding: 0 5px;
+      color: #424242;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    select {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #001c98;
+      border: none;
+      background: none;
+    }
+  }
 `
 export const Select = styled.select`
   background-color: white;

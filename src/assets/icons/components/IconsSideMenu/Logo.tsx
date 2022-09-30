@@ -3,7 +3,7 @@ export function Logo() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="120"
-      height="25"
+      height="45"
       fill="none"
       viewBox="0 0 173 39"
     >

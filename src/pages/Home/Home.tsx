@@ -16,7 +16,7 @@ export function Home() {
       </SideAStyled>
       <ContentStyled>
         <TopStyled>
-          <TopBar />
+          <TopBar name="Thiago Menezes" email="exemplo@exemplo.com" />
         </TopStyled>
         <Dashboard />
       </ContentStyled>
