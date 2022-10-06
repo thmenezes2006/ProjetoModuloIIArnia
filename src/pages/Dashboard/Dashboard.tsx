@@ -1,7 +1,7 @@
 import { IconPeoples } from '../../assets/icons/IconPeoples'
 import { IconProduct } from '../../assets/icons/components/IconsSideMenu/IconProduct'
 import { CardDash } from '../../components/CardDash/CardDash'
-import { TableContent } from '../../components/TableContent/TableContent'
+import { TableDashboard } from '../../components/TableDashboard/TableDashboard'
 import { Toggle } from '../../components/Toggle/Toggle'
 import {
   ContentDash,
@@ -64,7 +64,7 @@ export function Dashboard() {
 
       <BodyStyled>
         <TableDiv>
-          <TableContent
+          <TableDashboard
             bkg="#C5CFFF"
             icon={<IconProduct h="20" w="20" c="#001c98" />}
             tableTitle="Produtos"
@@ -72,7 +72,7 @@ export function Dashboard() {
           />
         </TableDiv>
         <TableDiv>
-          <TableContent
+          <TableDashboard
             bkg="#001c98"
             icon={<IconPeoples w="20" h="20" c="white" />}
             tableTitle="Clientes"

@@ -10,7 +10,7 @@ export function Input({ label, type, placeholder }: InputProps) {
   return (
     <div>
       <LabelStyled>{label}</LabelStyled>
-      <InputStyled type={type} placeholder={placeholder} />
+      <InputStyled type={type} placeholder={placeholder} required />
     </div>
   )
 }

@@ -18,13 +18,13 @@ export const Body = styled.div`
     }
   }
 `
-export const IconUserStyled = styled.div`
+export const IconUserStyled = styled.div<{ bColor: string }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: #001c98;
+  background: ${({ bColor }) => `${bColor}`};
   border-radius: 45px;
 `
 

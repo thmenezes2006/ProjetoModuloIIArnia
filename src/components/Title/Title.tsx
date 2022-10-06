@@ -2,7 +2,7 @@ import { H1, H5 } from './Title.styled'
 
 type TitleProps = {
   title: string
-  subtitle: string
+  subtitle?: string
 }
 
 export function Title({ title, subtitle }: TitleProps) {

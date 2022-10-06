@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const ContentDash = styled.div`
   justify-content: center;
   margin: 20px;
+  height: 100px;
+  background: #ffffff;
 `
 export const TopDash = styled.div<{ bColor: string }>`
   background: ${({ bColor }) => `${bColor}`};
@@ -54,7 +56,7 @@ export const BodyStyled = styled.div`
 export const TableDiv = styled.div`
   width: 100%;
   box-shadow: 0px 7px 30px rgba(187, 192, 205, 0.4);
-  border-radius: 24px;
+  border-radius: 15px;
 `
 
 export const DivCardDash = styled.div`

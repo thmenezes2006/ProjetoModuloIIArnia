@@ -16,13 +16,10 @@ type UserProps = {
 export function TopBar({ name, email }: UserProps) {
   return (
     <Body>
-      {/* <button onClick={() =>} type="button">
-        <IconMenu />
-      </button> */}
       <div>
         <UserStyled>
-          <IconUserStyled>
-            <IconUser />
+          <IconUserStyled bColor="#001c98">
+            <IconUser color="#fff" size="25" />
           </IconUserStyled>
           <UserDataStyled>
             <h5>{name}</h5>

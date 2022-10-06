@@ -1,13 +1,9 @@
 // import { Login } from './pages/Login/Login'
-import { Home } from './pages/Home/Home'
 import './global.Styled.css'
+import { AppRoutes } from './routes'
 
 function App() {
-  return (
-    <div>
-      <Home />
-    </div>
-  )
+  return <AppRoutes />
 }
 
 export default App

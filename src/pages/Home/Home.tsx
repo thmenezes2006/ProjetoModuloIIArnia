@@ -1,6 +1,7 @@
+import { Outlet } from 'react-router-dom'
 import { Sidebar } from '../../components/Sidebar/Sidebar'
 import { TopBar } from '../../components/TopBar/TopBar'
-import { Dashboard } from '../Dashboard/Dashboard'
+
 import {
   ContentStyled,
   HomeStyled,
@@ -18,7 +19,9 @@ export function Home() {
         <TopStyled>
           <TopBar name="Thiago Menezes" email="exemplo@exemplo.com" />
         </TopStyled>
-        <Dashboard />
+        <div>
+          <Outlet />
+        </div>
       </ContentStyled>
     </HomeStyled>
   )

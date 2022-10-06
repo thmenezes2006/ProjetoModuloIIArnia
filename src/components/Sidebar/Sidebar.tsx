@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { IconClock } from '../../assets/icons/components/IconsSideMenu/IconClock'
 import { IconGraphic } from '../../assets/icons/components/IconsSideMenu/IconGraphic'
 import { IconProduct } from '../../assets/icons/components/IconsSideMenu/IconProduct'
@@ -22,6 +23,8 @@ import { LogoCompact } from '../../assets/icons/components/IconsSideMenu/LogoCom
 import { IconMenu } from '../../assets/icons/IconMenu'
 
 export function Sidebar() {
+  const navigate = useNavigate()
+
   const [display, setDisplay] = useState('flex')
   const [logo, setLogo] = useState(Logo)
   const [ml, setMl] = useState(200)
@@ -46,20 +49,35 @@ export function Sidebar() {
         </CompactSideBarStyled>
         <LogoDivStyled>{logo}</LogoDivStyled>
         <DivMenuStyled>
-          <ButtonMenu display={display}>
+          <ButtonMenu
+            onClick={() => {
+              navigate('/dashboard')
+            }}
+            display={display}
+          >
             <IconClock />
             <ButtonStyled display={display} type="button">
               Dashboard
             </ButtonStyled>
           </ButtonMenu>
-          <ButtonMenu display={display}>
+          <ButtonMenu
+            onClick={() => {
+              navigate('/predicoes')
+            }}
+            display={display}
+          >
             <IconGraphic />
 
             <ButtonStyled display={display} type="button">
               Predições
             </ButtonStyled>
           </ButtonMenu>
-          <ButtonMenu display={display}>
+          <ButtonMenu
+            onClick={() => {
+              navigate('/produtos')
+            }}
+            display={display}
+          >
             <IconProduct h="25" w="25" c="#ffffff" />
 
             <ButtonStyled display={display} type="button">

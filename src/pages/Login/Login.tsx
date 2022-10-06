@@ -1,8 +1,10 @@
-import { Button } from '../../components/Form/Button/Button'
+// import { useNavigate } from 'react-router-dom'
+
 import { Input } from '../../components/Form/Inputs/Input'
 import { ImgLogin } from '../../components/ImgLogin/ImgLogin'
 import { ShowPassword } from '../../components/ShowPassword/ShowPassword'
 import { Title } from '../../components/Title/Title'
+import { authLogin } from '../../services/Auth/Auth'
 import {
   Checkbox,
   CheckDiv,
@@ -10,10 +12,16 @@ import {
   PasswordLoginDiv,
   SideA,
   SideB,
+  SingIn,
   Wrapper,
 } from './Login.styled'
 
 export function Login() {
+  // const navigate = useNavigate()
+  const doLogin = () => {
+    const postLogin = await authLogin(email, password)
+  }
+
   return (
     <Container>
       <Wrapper>
@@ -36,7 +44,9 @@ export function Login() {
             </Checkbox>
             <p>Esqueci minha senha</p>
           </CheckDiv>
-          <Button label="Entrar" />
+          <SingIn type="button" onClick={doLogin}>
+            Entrar
+          </SingIn>
         </SideA>
       </Wrapper>
 

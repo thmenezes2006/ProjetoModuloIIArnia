@@ -4,7 +4,7 @@ import {
   StyledTable,
   CardTable,
   HeadTable,
-} from './TableContent.styled'
+} from './TableDashboard.styled'
 
 type HeaderTable = {
   icon: ReactNode
@@ -13,7 +13,7 @@ type HeaderTable = {
   bkg: string
 }
 
-export function TableContent({ icon, toggle, tableTitle, bkg }: HeaderTable) {
+export function TableDashboard({ icon, toggle, tableTitle, bkg }: HeaderTable) {
   return (
     <CardTable>
       <HeadTable>
@@ -42,6 +42,21 @@ export function TableContent({ icon, toggle, tableTitle, bkg }: HeaderTable) {
           </tr>
           <tr>
             <td>3</td>
+            <td>Exemplo3</td>
+            <td>ex3%</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Exemplo3</td>
+            <td>ex3%</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Exemplo3</td>
+            <td>ex3%</td>
+          </tr>
+          <tr>
+            <td>6</td>
             <td>Exemplo3</td>
             <td>ex3%</td>
           </tr>

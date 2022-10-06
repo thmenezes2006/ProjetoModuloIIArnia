@@ -24,13 +24,31 @@ export const BkgIconTable = styled.div<{ color: string }>`
 `
 export const StyledTable = styled.div`
   margin: 0 20px;
+  overflow-y: auto;
+  height: 300px;
+  ::-webkit-scrollbar {
+    width: 10px;
+    margin: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #c5cfff;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #02156a;
+    border-radius: 10px;
+  }
   table {
     width: 100%;
     text-align: left;
     border-collapse: separate;
     border-spacing: 0 5px;
+    border: 2px solid transparent;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
   }
-
   td {
     padding: 12px;
     font-size: 14px;
