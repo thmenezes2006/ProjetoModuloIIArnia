@@ -1,30 +1,21 @@
+import { ReactNode } from 'react'
 import { IconUser } from '../../assets/icons/IconUser'
 import { IconUserStyled } from '../TopBar/TopBar.styled'
 import { CardHeader, CardPredStyled, TablePred } from './CardPred.styled'
 
 type CardPredProps = {
-  nomeDistribuidor: string
-  statusDistribuidor: string
-  produto: string
-  dataCompra: string
+  dadosDistribuidor: ReactNode
+  dadosProdutos: ReactNode
 }
 
-export function CardPred({
-  nomeDistribuidor,
-  statusDistribuidor,
-  produto,
-  dataCompra,
-}: CardPredProps) {
+export function CardPred({ dadosDistribuidor, dadosProdutos }: CardPredProps) {
   return (
     <CardPredStyled>
       <CardHeader>
         <IconUserStyled bColor="#C5CFFF">
-          <IconUser color="#001C98" size="22" />
+          <IconUser color="#001C98" size="20" />
         </IconUserStyled>
-        <div>
-          <h3>{nomeDistribuidor}</h3>
-          <h6>{statusDistribuidor}</h6>
-        </div>
+        <div>{dadosDistribuidor}</div>
       </CardHeader>
       <TablePred>
         <table>
@@ -32,10 +23,7 @@ export function CardPred({
             <th>Produto</th>
             <th>Próx. Compra</th>
           </tr>
-          <tr>
-            <td>{produto}</td>
-            <td>{dataCompra}</td>
-          </tr>
+          {dadosProdutos}
         </table>
       </TablePred>
     </CardPredStyled>

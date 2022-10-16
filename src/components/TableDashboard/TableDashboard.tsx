@@ -11,9 +11,18 @@ type HeaderTable = {
   toggle: ReactNode
   tableTitle: string
   bkg: string
+  headerTable: ReactNode
+  bodyTable: ReactNode
 }
 
-export function TableDashboard({ icon, toggle, tableTitle, bkg }: HeaderTable) {
+export function TableDashboard({
+  icon,
+  toggle,
+  tableTitle,
+  bkg,
+  headerTable,
+  bodyTable,
+}: HeaderTable) {
   return (
     <CardTable>
       <HeadTable>
@@ -25,41 +34,8 @@ export function TableDashboard({ icon, toggle, tableTitle, bkg }: HeaderTable) {
       </HeadTable>
       <StyledTable>
         <table>
-          <tr>
-            <th>Id</th>
-            <th>Produto</th>
-            <th>Percentual</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Exemplo</td>
-            <td>ex%</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Exemplo2</td>
-            <td>ex2%</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Exemplo3</td>
-            <td>ex3%</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Exemplo3</td>
-            <td>ex3%</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Exemplo3</td>
-            <td>ex3%</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>Exemplo3</td>
-            <td>ex3%</td>
-          </tr>
+          {headerTable}
+          {bodyTable}
         </table>
       </StyledTable>
     </CardTable>

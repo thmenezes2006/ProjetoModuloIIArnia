@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const StyledTable = styled.div`
   margin: 40px 20px;
+  align-items: center;
   overflow-y: auto;
   height: 60vh;
   ::-webkit-scrollbar {
@@ -19,10 +20,10 @@ export const StyledTable = styled.div`
   }
   table {
     width: 100%;
-    text-align: left;
     border-collapse: separate;
     border-spacing: 0 5px;
     border: 2px solid transparent;
+    border-spacing: 10px 10px;
     border-collapse: collapse;
     border-radius: 15px;
     overflow: hidden;
@@ -31,6 +32,7 @@ export const StyledTable = styled.div`
     padding: 12px;
     font-size: 14px;
     font-weight: 600;
+    text-align: center;
   }
   th {
     color: #c5cfff;

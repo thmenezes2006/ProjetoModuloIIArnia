@@ -4,13 +4,29 @@ type InputProps = {
   label: string
   type: string
   placeholder: string
+  value: string
+  onChange: React.ChangeEventHandler<HTMLInputElement>
+  borderColor: string
 }
-
-export function Input({ label, type, placeholder }: InputProps) {
+export function Input({
+  label,
+  type,
+  placeholder,
+  value,
+  onChange,
+  borderColor,
+}: InputProps) {
   return (
     <div>
       <LabelStyled>{label}</LabelStyled>
-      <InputStyled type={type} placeholder={placeholder} required />
+      <InputStyled
+        onChange={onChange}
+        value={value}
+        color={borderColor}
+        type={type}
+        placeholder={placeholder}
+        required
+      />
     </div>
   )
 }

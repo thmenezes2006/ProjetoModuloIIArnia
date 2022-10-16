@@ -20,12 +20,16 @@ export const TablePred = styled.div`
   padding: 10px 0;
   table {
     text-align: justify;
-    border-spacing: 25px 10px;
+    border-spacing: 10px 10px;
+    width: 100%;
   }
   tr {
     font-size: 12px;
     font-weight: 400;
     color: #424242;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
   }
   th {
     font-size: 12px;
@@ -33,7 +37,7 @@ export const TablePred = styled.div`
     color: #796ce0;
   }
   td {
-    text-align: center;
+    text-align: justify;
     font-weight: 400;
   }
 `

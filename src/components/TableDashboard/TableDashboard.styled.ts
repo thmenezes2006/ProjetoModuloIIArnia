@@ -41,7 +41,7 @@ export const StyledTable = styled.div`
   }
   table {
     width: 100%;
-    text-align: left;
+    text-align: center;
     border-collapse: separate;
     border-spacing: 0 5px;
     border: 2px solid transparent;

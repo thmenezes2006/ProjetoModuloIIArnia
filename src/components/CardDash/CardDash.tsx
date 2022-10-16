@@ -6,7 +6,7 @@ type CardDashProp = {
   text: string
   radial: number
   total: number
-  variacaoTotal: string
+  variacaoTotal: number
   bColor: string
 }
 export function CardDash({

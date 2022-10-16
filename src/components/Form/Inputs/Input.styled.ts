@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
-export const InputStyled = styled.input`
+export const InputStyled = styled.input<{ color: string }>`
   width: 400px;
   border-radius: 14px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid ${({ color }) => `${color}`};
   height: 48px;
   margin-top: 40px;
   padding-left: 10px;
   padding-right: 40px;
+  outline: 0;
   .div {
     display: flex;
   }
@@ -22,6 +23,7 @@ export const LabelStyled = styled.label`
   padding: 0px 3px;
   z-index: 1;
   background: white;
+  border-radius: 20px;
   & ::after {
     p {
       border: 1px solid white;

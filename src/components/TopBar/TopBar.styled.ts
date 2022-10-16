@@ -6,24 +6,14 @@ export const Body = styled.div`
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  button {
-    gap: 10%;
-    align-items: center;
-    display: flex;
-    background: none;
-    border: none;
-    cursor: pointer;
-    div {
-      justify-content: center;
-    }
-  }
 `
 export const IconUserStyled = styled.div<{ bColor: string }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 12px;
+  height: auto;
   background: ${({ bColor }) => `${bColor}`};
   border-radius: 45px;
 `
@@ -49,4 +39,36 @@ export const UserStyled = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+`
+export const ButtonChevron = styled.button`
+  gap: 10%;
+  align-items: center;
+  display: flex;
+  background: none;
+  border: none;
+  cursor: pointer;
+`
+export const Logout = styled.div<{ display: string }>`
+  display: ${({ display }) => `${display}`};
+  position: absolute;
+  top: 60px;
+  right: 35px;
+  padding: 10px 0;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px 0px 15px 15px;
+  box-shadow: 0px 7px 30px rgba(187, 192, 205, 0.4);
+  & :hover {
+    background: #c5cfff;
+    border-radius: 5px;
+  }
+`
+export const ButtonLogout = styled.button`
+  display: flex;
+  padding: 10px 20px;
+  background: transparent;
+  gap: 10px;
+  align-items: center;
+  border: none;
+  cursor: pointer;
 `

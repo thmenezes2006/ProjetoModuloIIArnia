@@ -22,13 +22,13 @@ export const PasswordLoginDiv = styled.div`
 `
 
 export const PasswordLoginButton = styled.div`
-  position: absolute;
-  right: 10px;
-  top: 47px;
+  position: relative;
 `
 export const ShowPasswordButton = styled.button`
+  position: absolute;
   border: none;
-  padding-top: 5px;
+  top: -35px;
+  left: 370px;
   background: none;
   cursor: pointer;
 `
