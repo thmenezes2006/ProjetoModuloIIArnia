@@ -42,10 +42,12 @@ export function Dashboard() {
   const [productsDash, setProductsDash] = useState<ProductType>([])
   const [clients, setClients] = useState<ProductType>([])
   const [resume, setResume] = useState<ResumeType>()
+  const statusPredicao = 'EM_BAIXA'
+  const datePredicao = '15/09/2022'
 
   useEffect(() => {
     ;(async () => {
-      const result = await getProductsDash()
+      const result = await getProductsDash({ statusPredicao, datePredicao })
       if (result.message) {
         alert(result.message)
       } else {

@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
+import { ButtonToggle } from './Toggle.styled'
 
 export function Toggle() {
   const [toggle, setToggle] = useState(true)
   return (
     <div>
-      <button type="button" onClick={() => setToggle(!toggle)}>
-        Toggle State
-      </button>
+      <ButtonToggle type="button" onClick={() => setToggle(!toggle)}>
+        Click me
+      </ButtonToggle>
     </div>
   )
 }
