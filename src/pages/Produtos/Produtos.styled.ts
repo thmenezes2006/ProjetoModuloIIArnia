@@ -39,3 +39,14 @@ export const ButtonFilter = styled.button`
   left: 550px;
   cursor: pointer;
 `
+export const StatusColor = styled.div<{ color: string; bColor: string }>`
+  display: flex;
+  justify-content: center;
+  div {
+    background: ${({ bColor }) => `${bColor}`};
+    color: ${({ color }) => `${color}`};
+    padding: 8px 0;
+    border-radius: 10px;
+    width: 100px;
+  }
+`

@@ -47,7 +47,7 @@ export const HelpStyled = styled.div<{ display: string }>`
   height: 140px;
   border-radius: 15px;
   width: 150px;
-  margin: 220px 15px 10px 15px;
+  margin: 240px 15px 10px 15px;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;

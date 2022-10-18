@@ -25,7 +25,7 @@ export const BkgIconTable = styled.div<{ color: string }>`
 export const StyledTable = styled.div`
   margin: 0 20px;
   overflow-y: auto;
-  height: 35vh;
+  height: 40vh;
   ::-webkit-scrollbar {
     width: 10px;
     margin: 5px;
@@ -71,9 +71,9 @@ export const StyledTable = styled.div`
 export const ButtonToggle = styled.button<{ bColor: string }>`
   background: ${({ bColor }) => `${bColor}`};
   border: none;
-  padding: 5px 15px;
+  width: 90px;
+  height: 35px;
   border-radius: 10px;
   color: white;
-  width: 100px;
   cursor: pointer;
 `

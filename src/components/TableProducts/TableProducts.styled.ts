@@ -4,7 +4,7 @@ export const StyledTable = styled.div`
   margin: 40px 20px;
   align-items: center;
   overflow-y: auto;
-  height: 60vh;
+  height: 52vh;
   ::-webkit-scrollbar {
     width: 10px;
     margin: 5px;

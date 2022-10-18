@@ -9,6 +9,7 @@ import {
   ButtonFilter,
   ProductsContent,
   ButtonSearch,
+  StatusColor,
 } from './Produtos.styled'
 
 type ProductType = {
@@ -19,7 +20,7 @@ type ProductType = {
 }[]
 
 export function Produtos() {
-  const [products, setProducts] = useState<ProductType>([])
+  const [products, setProducts] = useState<ProductType>([] as ProductType)
 
   useEffect(() => {
     ;(async () => {
@@ -57,7 +58,17 @@ export function Produtos() {
               <tr>
                 <td>{item.id}</td>
                 <td>{item.nome}</td>
-                <td>{item.classificacao}</td>
+                <td>
+                  {item.classificacao === 'EM_ALTA' ? (
+                    <StatusColor color="#00C247" bColor="#D9FEE6">
+                      <div>Em Alta</div>
+                    </StatusColor>
+                  ) : (
+                    <StatusColor color="#FF3333" bColor="#FFE1E1">
+                      <div>Em Baixa</div>
+                    </StatusColor>
+                  )}
+                </td>
                 <td>{item.percentual}%</td>
               </tr>
             ))}
