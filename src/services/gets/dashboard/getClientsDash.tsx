@@ -1,10 +1,16 @@
 import axios from 'axios'
 import { apiService } from '../../config/apiService'
 
-export const getClientsDash = async () => {
+type Gets = {
+  dateInicial: string
+  statusClientes: string
+}
+
+export const getClientsDash = async ({ statusClientes, dateInicial }: Gets) => {
+  const todayDate = new Date(Date.now()).toLocaleString().split(',')[0]
   try {
     const result = await apiService.get(
-      'dashboard/clientes?classificacao=EM_ALTA&dataFim=20/09/2022&dataInicio=15/09/2022'
+      `dashboard/clientes?classificacao=${statusClientes}&dataFim=${todayDate}&dataInicio=${dateInicial}`
     )
 
     if (result.status === 200) {

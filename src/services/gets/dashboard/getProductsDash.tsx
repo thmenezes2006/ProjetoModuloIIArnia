@@ -2,18 +2,18 @@ import axios from 'axios'
 import { apiService } from '../../config/apiService'
 
 type Gets = {
-  datePredicao: string
-  statusPredicao: string
+  dateInicial: string
+  statusProdutos: string
 }
 
 export const getProductsDash = async ({
-  statusPredicao,
-  datePredicao,
+  statusProdutos,
+  dateInicial,
 }: Gets) => {
   const todayDate = new Date(Date.now()).toLocaleString().split(',')[0]
   try {
     const result = await apiService.get(
-      `dashboard/produtos?classificacao=${statusPredicao}&dataFim=${todayDate}&dataInicio=${datePredicao}`
+      `dashboard/produtos?classificacao=${statusProdutos}&dataFim=${todayDate}&dataInicio=${dateInicial}`
     )
 
     if (result.status === 200) {

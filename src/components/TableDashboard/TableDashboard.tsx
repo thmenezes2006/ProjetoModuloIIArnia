@@ -1,18 +1,21 @@
-import { ReactNode } from 'react'
+import { MouseEventHandler, ReactNode } from 'react'
 import {
   BkgIconTable,
   StyledTable,
   CardTable,
   HeadTable,
+  ButtonToggle,
 } from './TableDashboard.styled'
 
 type HeaderTable = {
   icon: ReactNode
-  toggle: ReactNode
+  toggle: MouseEventHandler<HTMLButtonElement>
   tableTitle: string
   bkg: string
   headerTable: ReactNode
   bodyTable: ReactNode
+  clickStatus: string
+  bColor: string
 }
 
 export function TableDashboard({
@@ -22,6 +25,8 @@ export function TableDashboard({
   bkg,
   headerTable,
   bodyTable,
+  clickStatus,
+  bColor,
 }: HeaderTable) {
   return (
     <CardTable>
@@ -30,7 +35,9 @@ export function TableDashboard({
           <BkgIconTable color={bkg}>{icon}</BkgIconTable>
           <div>{tableTitle}</div>
         </div>
-        <div>{toggle}</div>
+        <ButtonToggle type="button" bColor={bColor} onClick={toggle}>
+          {clickStatus}
+        </ButtonToggle>
       </HeadTable>
       <StyledTable>
         <table>

@@ -19,7 +19,6 @@ export const DivMenuStyled = styled.div`
 export const SideLeftStyled = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
 `
 
@@ -48,7 +47,7 @@ export const HelpStyled = styled.div<{ display: string }>`
   height: 140px;
   border-radius: 15px;
   width: 150px;
-  margin: 0px 15px 70px 15px;
+  margin: 220px 15px 10px 15px;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const HomeStyled = styled.div`
   display: flex;
-  height: 110vh;
+  height: 100vh;
   background: whitesmoke;
 `
 export const TopStyled = styled.div`

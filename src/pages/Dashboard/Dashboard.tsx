@@ -3,7 +3,6 @@ import { IconPeoples } from '../../assets/icons/IconPeoples'
 import { IconProduct } from '../../assets/icons/components/IconsSideMenu/IconProduct'
 import { CardDash } from '../../components/CardDash/CardDash'
 import { TableDashboard } from '../../components/TableDashboard/TableDashboard'
-import { Toggle } from '../../components/Toggle/Toggle'
 import {
   ContentDash,
   DivDash,
@@ -42,30 +41,68 @@ export function Dashboard() {
   const [productsDash, setProductsDash] = useState<ProductType>([])
   const [clients, setClients] = useState<ProductType>([])
   const [resume, setResume] = useState<ResumeType>()
-  const statusPredicao = 'EM_BAIXA'
-  const datePredicao = '15/09/2022'
+
+  const [statusProd, setStatusProdutos] = useState<boolean>(true)
+  const [statusClie, setStatusClientes] = useState<boolean>(true)
+  const [statusPredProdutos, setStatusPredProdutos] = useState('EM_ALTA')
+  const [statusNameProdutos, setStatusNameProdutos] = useState('Em Alta')
+  const [statusPredClientes, setStatusPredClientes] = useState('EM_ALTA')
+  const [statusNameClientes, setStatusNameClientes] = useState('Em Alta')
+  const [bColorProdutos, setBColorProdutos] = useState('#00C247')
+  const [bColorClientes, setBColorClientes] = useState('#00C247')
+
+  const isStatusProdutos = () => {
+    if (statusProd === true) {
+      setStatusProdutos(false)
+      setStatusPredProdutos('EM_BAIXA')
+      setStatusNameProdutos('Em Baixa')
+      setBColorProdutos('#FF3333')
+    } else {
+      setStatusProdutos(true)
+      setStatusPredProdutos('EM_ALTA')
+      setStatusNameProdutos('Em Alta')
+      setBColorProdutos('#00C247')
+    }
+  }
+
+  const isStatusClientes = () => {
+    if (statusClie === true) {
+      setStatusClientes(false)
+      setStatusPredClientes('EM_BAIXA')
+      setStatusNameClientes('Em Baixa ')
+      setBColorClientes('#FF3333')
+    } else {
+      setStatusClientes(true)
+      setStatusPredClientes('EM_ALTA')
+      setStatusNameClientes('Em Alta')
+      setBColorClientes('#00C247')
+    }
+  }
+  const statusProdutos = statusPredProdutos
+  const statusClientes = statusPredClientes
+  const dateInicial = '15/09/2022'
 
   useEffect(() => {
     ;(async () => {
-      const result = await getProductsDash({ statusPredicao, datePredicao })
+      const result = await getProductsDash({ statusProdutos, dateInicial })
       if (result.message) {
         alert(result.message)
       } else {
         setProductsDash(result)
       }
     })()
-  }, [])
-  console.log(resume)
+  }, [statusPredProdutos])
+
   useEffect(() => {
     ;(async () => {
-      const result = await getClientsDash()
+      const result = await getClientsDash({ statusClientes, dateInicial })
       if (result.message) {
         alert(result.message)
       } else {
         setClients(result)
       }
     })()
-  }, [])
+  }, [statusPredClientes])
 
   useEffect(() => {
     ;(async () => {
@@ -146,7 +183,9 @@ export function Dashboard() {
             bkg="#C5CFFF"
             icon={<IconProduct h="20" w="20" c="#001c98" />}
             tableTitle="Produtos"
-            toggle={Toggle()}
+            toggle={() => isStatusProdutos()}
+            clickStatus={statusNameProdutos}
+            bColor={bColorProdutos}
           />
         </TableDiv>
         <TableDiv>
@@ -168,7 +207,9 @@ export function Dashboard() {
             bkg="#001c98"
             icon={<IconPeoples w="20" h="20" c="white" />}
             tableTitle="Clientes"
-            toggle={Toggle()}
+            toggle={() => isStatusClientes()}
+            clickStatus={statusNameClientes}
+            bColor={bColorClientes}
           />
         </TableDiv>
       </BodyStyled>
