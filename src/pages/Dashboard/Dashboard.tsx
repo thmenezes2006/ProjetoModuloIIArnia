@@ -45,23 +45,15 @@ export function Dashboard() {
   const [statusProd, setStatusProdutos] = useState<boolean>(true)
   const [statusClie, setStatusClientes] = useState<boolean>(true)
   const [statusPredProdutos, setStatusPredProdutos] = useState('EM_ALTA')
-  const [statusNameProdutos, setStatusNameProdutos] = useState('Em Alta')
   const [statusPredClientes, setStatusPredClientes] = useState('EM_ALTA')
-  const [statusNameClientes, setStatusNameClientes] = useState('Em Alta')
-  const [bColorProdutos, setBColorProdutos] = useState('#00C247')
-  const [bColorClientes, setBColorClientes] = useState('#00C247')
 
   const isStatusProdutos = () => {
     if (statusProd === true) {
       setStatusProdutos(false)
       setStatusPredProdutos('EM_BAIXA')
-      setStatusNameProdutos('Em Baixa')
-      setBColorProdutos('#FF3333')
     } else {
       setStatusProdutos(true)
       setStatusPredProdutos('EM_ALTA')
-      setStatusNameProdutos('Em Alta')
-      setBColorProdutos('#00C247')
     }
   }
 
@@ -69,13 +61,9 @@ export function Dashboard() {
     if (statusClie === true) {
       setStatusClientes(false)
       setStatusPredClientes('EM_BAIXA')
-      setStatusNameClientes('Em Baixa ')
-      setBColorClientes('#FF3333')
     } else {
       setStatusClientes(true)
       setStatusPredClientes('EM_ALTA')
-      setStatusNameClientes('Em Alta')
-      setBColorClientes('#00C247')
     }
   }
   const statusProdutos = statusPredProdutos
@@ -184,8 +172,10 @@ export function Dashboard() {
             icon={<IconProduct h="20" w="20" c="#001c98" />}
             tableTitle="Produtos"
             toggle={() => isStatusProdutos()}
-            clickStatus={statusNameProdutos}
-            bColor={bColorProdutos}
+            clickStatus={
+              statusPredProdutos === 'EM_ALTA' ? 'Em Alta' : 'Em Baixa'
+            }
+            bColor={statusPredProdutos === 'EM_ALTA' ? '#00C247' : '#FF3333'}
           />
         </TableDiv>
         <TableDiv>
@@ -208,8 +198,10 @@ export function Dashboard() {
             icon={<IconPeoples w="20" h="20" c="white" />}
             tableTitle="Clientes"
             toggle={() => isStatusClientes()}
-            clickStatus={statusNameClientes}
-            bColor={bColorClientes}
+            clickStatus={
+              statusPredClientes === 'EM_ALTA' ? 'Em Alta' : 'Em Baixa'
+            }
+            bColor={statusPredClientes === 'EM_ALTA' ? '#00C247' : '#FF3333'}
           />
         </TableDiv>
       </BodyStyled>
